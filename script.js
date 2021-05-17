@@ -46,5 +46,36 @@ window.onload = (function () {
     }
     }
     
-});
+})
+
+function NewParagraphAdded() 
+{
+  
+    var p = document.createElement("P"); 
+    
+    var a = document.createTextNode("New Paragraph Added."); 
+    
+    p.style.fontSize = 12;
+    
+    p.style.color = "green";
+    
+    p.appendChild(a); 
+	
+document.body.appendChild(p); 
+}
+
+function removeElementID(elementId) 
+{
+
+   var element = document.getElementById(elementId);
+
+   if (element) {
+
+       element.parentNode.removeChild(element);
+   } else {
+
+      alert("Element wit ID - " + elementId +" does not exists.");
+   }
+  
+}
     
